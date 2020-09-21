@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Guimel Valcazar</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=PT+Sans+Narrow" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+	  <meta name="description" content="Guimel Valcazar's website. I am a teacher of international business and I am also dedicated to web design, I am currently developing a podcast." />
+    <meta name="keywords" content="Guimel, Valcazar, Importaciones, Aduana, Podcasts" /> 
+  </head>
+  <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
+
+
+
+    <header class="header">
+      <div class="container">
+
+        <nav class="menu">
+          <ol>
+            <li>
+              <a href="https://www.guimel.co">Inicio</a>
+            </li>
+            <li>
+              <a href="https://www.guimel.co/about">About me</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </header>	 
+    
+    
+
+    <section id="portafolio" class="portfolio">
+      <div class="container">
+        <h2>Guimel Valcazar</h2>
+        <article class="project">
+            <figure class="project-imageContainer">
+              <h3>Blog</h3>
+              <a href="https://guimel.blogspot.com"><img width="465" src="images/blog.jpg" alt="Foto Guimel Valcazar"></a>
+            </figure>
+            
+            <figure class="project-imageContainer">
+              <h3>Podcasts</h3>
+              <a href="https://www.youtube.com/channel/UCeqeKyj897DHzRhVhRSndew"><img class="project-image" width="465" src="images/podcasts.png" alt="Foto Guimel Valcazar"></a>
+            </figure>	  
+          </article>
+      </div>
+    </section>
+	  
+
+	  	  
+    <section id="contacto" class="contact">
+      <div class="container">
+		 <div class="social">
+			<h3>Contacto:</h3>
+			 <img width="20" src="images/email.png" alt="email">
+			 <img src="images/correo.png" alt="contacto">
+     </div>
+		  		  
+        <div class="social">
+          <a href="https://twitter.com/guimelVM" class="social-link twitter"></a>
+          <a href="https://facebook.com/guimel.valcazar" class="social-link facebook"></a>
+          <a href="https://github.com/gvalcazar" class="social-link github"></a>
+          <a href="https://instagram.com/gvalcazar" class="social-link instagram"></a>
+		  <a href="https://www.linkedin.com/in/guimelvalcazar" class="social-link linkedin"></a>
+		  <a href="https://open.spotify.com/user/12124317674" class="social-link spotify"></a>
+        </div>
+      </div>
+    </section>
+	  
+	  
+	  
+	<section id="creditos" class="creditos">
+      <div class="container">
+        <div >
+          <p>© guimel.co &#124; 2020</p>
+        </div>
+      </div>
+    </section>
+	  
+    
+    
+    <footer class="footer">
+      <div class="container">
+        <div>
+          <p></p>
+        </div>
+        <div>
+          <p>Diseñado por Guimel</p>
+        </div>
+      </div>
+    </footer>
+    
+    
+	  
+    <script>
+      const ipad = window.matchMedia('screen and (max-width: 767px)')
+      const menu = document.querySelector('.menu');
+      // console.log(menu);
+      const burgerButton = document.querySelector('#burger-menu');
+      // console.log(burgerButton);
+
+      ipad.addListener(validation)
+
+      function validation(event) {
+        if (event.matches) {
+          burgerButton.addEventListener('click', hideShow)
+        } else {
+          burgerButton.removeEventListener('click', hideShow)
+        }
+      }
+      validation(ipad);
+
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active');
+        } else {
+          menu.classList.add('is-active');
+        }
+      }
+    </script>
+  </body>
+</html>
